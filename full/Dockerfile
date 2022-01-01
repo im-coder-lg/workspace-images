@@ -139,6 +139,7 @@ LABEL dazzle/test=tests/lang-python.yaml
 USER gitpod
 RUN sudo install-packages python3-pip
 
+RUN sudo apt install -y curl git-core gcc make zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libssl-dev tk-dev
 ENV PATH=$HOME/.pyenv/bin:$HOME/.pyenv/shims:$PATH
 RUN curl -fsSL https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash \
     && { echo; \
